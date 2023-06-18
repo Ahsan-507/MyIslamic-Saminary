@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class DBHelper extends SQLiteOpenHelper{
 
     public DBHelper(Context context) {
@@ -42,6 +44,13 @@ public class DBHelper extends SQLiteOpenHelper{
     public Cursor getData(){
         SQLiteDatabase db=this.getWritableDatabase();
         Cursor cr= db.rawQuery("select * from UserDetails",null);
+        return cr;
+    }
+
+    public Cursor getSearchedData(String nm){
+        SQLiteDatabase db=this.getWritableDatabase();
+        String n=nm;
+        Cursor cr= db.rawQuery("select * from UserDetails where name like "+n+"",null);
         return cr;
     }
 }
