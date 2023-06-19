@@ -27,7 +27,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:layout_below="@+id/heading"
-        android:text="Enter Your Details "
+        android:text="Enter Student Details "
         android:textAlignment="center"
         android:textFontWeight="@integer/material_motion_duration_long_1"
         android:textSize="28dp" />
@@ -60,7 +60,7 @@
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Add Student"
         android:textSize="18dp"
         android:layout_below="@+id/classs"
         android:layout_marginTop="20dp"/>

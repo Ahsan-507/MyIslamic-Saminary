@@ -49,7 +49,7 @@ public class UserList extends AppCompatActivity {
                 }
                 else{
                     while(cr.moveToNext()){
-//                        name.add(cr.getString(0));
+                        name.add(cr.getString(0));
                         age.add(cr.getString(1));
                         classs.add(cr.getString(2));
                     }
