@@ -1,6 +1,7 @@
 package com.ahsan.myislamicseminary;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             name_id=itemView.findViewById(R.id.textname);
             age_id=itemView.findViewById(R.id.textage);
             cls_id=itemView.findViewById(R.id.textclass);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(ct,SpecificUserDetails.class);
+                    intent.putExtra("date","Date: 20-06-2023");
+                    intent.putExtra("sabaq","Sabaq: Surah=3 and verse 1-10");
+                    intent.putExtra("sabaqi","Sabaqi: Surah=2");
+                    intent.putExtra("manzil","Manzil: Para=1");
+                    ct.startActivity(intent);
+                }
+            });
         }
     }
 }
